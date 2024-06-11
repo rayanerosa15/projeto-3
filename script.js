@@ -21,8 +21,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Deseja algum acessório?
-    ",
+        enunciado: "Deseja algum acessório?",
         alternativas: [
             "Não,obrigada!",
             "Sim,obrigada!."
