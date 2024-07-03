@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "manhã!",
-                afirmacao: "afirmacao"
+                afirmacao: "levou seu pet de manhã"
             },
             {
                 texto: "tarde!",
-                afirmacao: "afirmacao"
+                afirmacao: "levou seu pet a tarde"
             }
         ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "tradicional",
-                afirmacao: "afirmacao"
+                afirmacao: "ele recebeu uma tosa tradicionl"
             },
             {
                 texto: "apenas higiênico",
-                afirmacao: "afirmacao"
+                afirmacao: "ele recebeu uma tosa higiênica?"
             }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "sim, obrigado!",
-                afirmacao: "afirmacao"
+                afirmacao: "recebeu lacinhos"
             },
             {
                 texto: "não, obrigado!",
-                afirmacao: "afirmacao"
+                afirmacao: "voltou sem nenhum acessório"
             }
           
         ]
@@ -51,11 +51,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "simm!",
-                afirmacao: "afirmacao"
+                afirmacao: "tirou varias fotos"
             },
             {
                 texto: "não",
-                afirmacao: "afirmacao"
+                afirmacao: "foi embora sem tirar nenhuma foto"
             }
           
         ]    
@@ -94,7 +94,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
    
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "no final da tosa ";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
