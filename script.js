@@ -13,7 +13,7 @@ const perguntas = [
                 afirmacao: "afirmacao"
             },
             {
-                texto: "tarde!,
+                texto: "tarde!",
                 afirmacao: "afirmacao"
             }
         ]
@@ -50,11 +50,11 @@ const perguntas = [
         enunciado: "Ao final do procedimento podemos tirar foto?",
         alternativas: [
             {
-                texto: " simm!",
+                texto: "simm!",
                 afirmacao: "afirmacao"
             },
             {
-                texto: "simm!",
+                texto: "não",
                 afirmacao: "afirmacao"
             }
           
