@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "manhã!",
-                afirmacao: "levou seu pet de manhã"
+                afirmacao: "levou seu pet de manhã."
             },
             {
                 texto: "tarde!",
-                afirmacao: "levou seu pet a tarde"
+                afirmacao: "levou seu pet à tarde."
             }
         ]
     },
@@ -23,44 +23,40 @@ const perguntas = [
         alternativas: [
             {
                 texto: "tradicional",
-                afirmacao: "ele recebeu uma tosa tradicionl"
+                afirmacao: "ele recebeu uma tosa tradicional."
             },
             {
                 texto: "apenas higiênico",
-                afirmacao: "ele recebeu uma tosa higiênica?"
+                afirmacao: "ele recebeu uma tosa higiênica."
             }
         ]
     },
     {
-        enunciado: "deseja algum acessório?",
+        enunciado: "Deseja algum acessório?",
         alternativas: [
             {
                 texto: "sim, obrigado!",
-                afirmacao: "recebeu lacinhos"
+                afirmacao: "recebeu lacinhos."
             },
             {
                 texto: "não, obrigado!",
-                afirmacao: "voltou sem nenhum acessório"
+                afirmacao: "voltou sem nenhum acessório."
             }
-         
         ]
-     
-},
+    },
     {
         enunciado: "Ao final do procedimento podemos tirar foto?",
         alternativas: [
             {
                 texto: "simm!",
-                afirmacao: "tirou varias fotos"
+                afirmacao: "tirou várias fotos."
             },
             {
                 texto: "não",
-                afirmacao: "foi embora sem tirar nenhuma foto"
+                afirmacao: "foi embora sem tirar nenhuma foto."
             }
-         
         ]    
-},
- 
+    }
 ];
 
 let atual = 0;
@@ -74,29 +70,32 @@ function mostraPergunta() {
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-     caixaAlternativas.textContent = "";
+    caixaAlternativas.textContent = ""; // Limpar alternativas antes de adicionar novas
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
+
+
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao;
-    historia = afirmacoes;
+    historiaFinal += afirmacoes + " "; // Concatenar a afirmação selecionada na história final
     atual++;
     mostraPergunta();
 }
-   
+
 function mostraResultado() {
-    caixaPerguntas.textContent = "no final da tosa ";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+    caixaPerguntas.textContent = "No final da tosa:"; // Texto final ajustado
+    textoResultado.textContent = historiaFinal.trim(); // Mostrar a história final completa
+    caixaAlternativas.textContent = ""; // Limpar alternativas
 }
+
 
 mostraPergunta();
