@@ -6,7 +6,7 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Hoje é dia de levar seu petshop, você prefere ir de manhã ou a tarde?",
+        enunciado: "Hoje é dia de levar seu pet ao petshop, você prefere ir de manhã ou a tarde?",
         alternativas: [
             {
                 texto: "manhã!",
@@ -42,9 +42,9 @@ const perguntas = [
                 texto: "não, obrigado!",
                 afirmacao: "voltou sem nenhum acessório"
             }
-          
+         
         ]
-      
+     
 },
     {
         enunciado: "Ao final do procedimento podemos tirar foto?",
@@ -57,10 +57,10 @@ const perguntas = [
                 texto: "não",
                 afirmacao: "foi embora sem tirar nenhuma foto"
             }
-          
+         
         ]    
-}, 
-  
+},
+ 
 ];
 
 let atual = 0;
@@ -88,7 +88,7 @@ function mostraAlternativas(){
 }
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao;
-    historia += afirmacoes + "";
+    historia = afirmacoes;
     atual++;
     mostraPergunta();
 }
